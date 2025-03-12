@@ -4,57 +4,33 @@
     {
         static void Main(string[] args)
         {
-            int[] numbers = { 8, 10, 3, 4, 6 };
-            Console.WriteLine(Min(numbers));
-            Console.WriteLine(CapitalLetters("Hello World Salam"));
-            Console.WriteLine(TrimmedWord("   Ilham Abbasov  "));
-
+            Console.WriteLine(Area(4));
+            Console.WriteLine(Area(5, 7));
+            Console.WriteLine(Area(2, 4, 6));
+            Console.WriteLine(Area(10, 8, 5, 3));
         }
 
-        static int Min(int[] numbers)
+        static int Area(int r)
         {
-            int minNumber = numbers[0];
-
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (minNumber > numbers[i])
-                {
-                    minNumber = numbers[i];
-                }
-            }
-
-            return minNumber;
+            int pi = 3;
+            int area = pi * (r * r);
+            return area;
         }
-
-        static string CapitalLetters(string word)
+        static int Area(int a, int b)
         {
-            string capitalLetters = "";
-            capitalLetters += word[0];
-
-            for (int i = 0; i < word.Length; i++)
-            {
-                if (word[i] == ' ')
-                {
-                    capitalLetters += word[i + 1];
-                
-                }
-            }
-
-            return capitalLetters;
+            int area = a * b;
+            return area;
         }
-
-        static string TrimmedWord(string word)
+        static int Area(int a, int b, int c)
         {
-            string trimmedWord = "";
-            for (int i = 0; i < word.Length; i++)
-            {
-                if (word[i] != ' ')
-                {
-                    trimmedWord += word[i];
-                }
-
-            }
-            return trimmedWord;
+            int area = 2 * ((a * b) + (c * a) + (b * c));
+            return area;
+        }
+        static int Area(int a, int b, int c, int r)
+        {
+            int p = (a + b + c) / 2;
+            int area = p * r;
+            return area;
         }
     }
 }
